@@ -1,0 +1,13 @@
+<!-- /views/teachers/courses.ejs -->
+<h1>Courses</h1>
+<a href="/teachers/create">Create New Course</a>
+<ul>
+  <% courses.forEach(course => { %>
+    <li><%= course.name %> 
+      <form action="/teachers/delete/<%= course._id %>" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+
