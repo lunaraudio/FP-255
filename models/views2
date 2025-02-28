@@ -1,0 +1,11 @@
+<!-- /views/students/schedule.ejs -->
+<h1>Your Schedule</h1>
+<ul>
+  <% schedule.forEach(course => { %>
+    <li><%= course.name %> 
+      <form action="/students/drop/<%= course._id %>" method="POST">
+        <button type="submit">Drop</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
