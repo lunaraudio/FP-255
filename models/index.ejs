@@ -1,0 +1,32 @@
+<!-- /views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Course Registration</title>
+    <link rel="stylesheet" href="/public/css/style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to the College Course Registration System</h1>
+        <nav>
+            <a href="/login">Login</a> | 
+            <a href="/register">Register</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Available Courses</h2>
+        <ul>
+            <% courses.forEach(course => { %>
+                <li><%= course.name %> - <%= course.subject %></li>
+            <% }) %>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 College Registration System</p>
+    </footer>
+</body>
+</html>
